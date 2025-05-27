@@ -1,0 +1,32 @@
+  1  CREATE OR REPLACE PROCEDURE PRINTING_NAME
+  2  IS
+  3  BEGIN
+  4  DBMS_OUTPUT.PUT_LINE('SUDEEP');
+  5* END;
+SQL> /
+
+Procedure created.
+
+SQL> EXEC PRINTING_NAME;
+SUDEEP
+
+
+Wrote file afiedt.buf
+
+  1  CREATE OR REPLACE PROCEDURE PRINTING_QUERIES
+  2  IS
+  3   NAME VARCHAR(20);
+  4   BEGIN
+  5  SELECT ENAME  INTO NAME
+  6  FROM EMP
+  7  WHERE JOB ='PRESIDENT';
+  8  DBMS_OUTPUT.PUT_LINE(NAME);
+  9* END;
+SQL> /
+
+Procedure created.
+
+SQL> EXEC PRINTING_QUERIES;
+KING
+
+PL/SQL procedure successfully completed.

@@ -1,0 +1,37 @@
+  1  declare
+  2  name varchar(20);
+  3  sal number(10,2);
+  4  joinedDate date;
+  5  begin
+  6  select Ename , sal, hiredate into name,sal,joinedDate
+  7  from emp
+  8  where job ='PRESIDENT'
+  9  ;
+ 10  DBMS_OUTPUT.PUT_LINE(NAME|| ' '|| SAL || '  '|| JOINEDDATE);
+ 11* END;
+SQL> /
+KING 5000  17-NOV-81
+
+PL/SQL procedure successfully completed.
+
+
+
+  1  declare
+  2  EMPNO NUMBER(6,2);
+  3  name varchar(20);
+  4  JOB varchar(20);
+  5  MGR NUMBER(7,2);
+  6  HIREDATE DATE;
+  7  SAL NUMBER(7,1);
+  8  COMM NUMBER(7,1);
+  9  DEPTNO NUMBER(5,2);
+ 10  BEGIN
+ 11  SELECT * INTO EMPNO,NAME,JOB, MGR, HIREDATE,SAL,COMM,DEPTNO
+ 12  FROM EMP
+ 13  WHERE JOB ='PRESIDENT';
+ 14  DBMS_OUTPUT.PUT_LINE( EMPNO||' ' ||NAME || ' '||JOB || '  '||MGR||''||' '||HIREDATE||' '||SAL||' '||COMM||' '||DEPTNO );
+ 15* END ;
+SQL> /
+7839 KING PRESIDENT   17-NOV-81 5000  10
+
+PL/SQL procedure successfully completed.

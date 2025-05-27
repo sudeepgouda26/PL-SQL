@@ -1,0 +1,25 @@
+	PROCEDURE WITH PrMETER
+
+  1  
+
+create or replace procedure displayDt
+  2  (empn Number)
+  3  is
+  4  name varchar(20);
+  5  sal number(6);
+  6  job varchar(20);
+  7  hiredate date;
+  8  begin
+  9  select Ename,sal,job,hiredate into name,sal,job,hiredate
+ 10  from emp
+ 11  where empno =empn;
+ 12   DBMS_OUTPUT.PUT_LINE(name||' '||sal || ' '||JOb || '  '||hiredate );
+ 13* end;
+SQL> /
+
+Procedure created.
+
+SQL> exec displayDt(7369);
+SCOTT 990 SECURITY  17-DEC-80
+
+PL/SQL procedure successfully completed.
